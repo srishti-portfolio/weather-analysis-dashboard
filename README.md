@@ -1,4 +1,4 @@
-# India Capitals Weather Pipeline
+# India Capitals Weather Analysis Pipeline 
 
 An automated daily ETL pipeline for the **capital city of every Indian state and
 union territory**: 34 cities covering all 28 states and 8 UTs. It pulls weather
