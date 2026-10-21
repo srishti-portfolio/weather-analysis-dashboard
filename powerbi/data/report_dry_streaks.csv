@@ -1,0 +1,35 @@
+﻿city,state_ut,region,start_date,end_date,length_days
+Mumbai,Maharashtra,West,2025-11-05,2026-04-08,155
+Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-01-02,2026-05-23,142
+Raipur,Chhattisgarh,Central,2025-11-02,2026-03-19,138
+Gandhinagar,Gujarat,West,2025-11-04,2026-03-18,135
+Agartala,Tripura,Northeast,2025-11-07,2026-03-11,125
+Aizawl,Mizoram,Northeast,2025-11-06,2026-03-02,117
+Imphal,Manipur,Northeast,2025-11-07,2026-03-02,116
+Kolkata,West Bengal,East,2025-11-02,2026-02-23,114
+Ranchi,Jharkhand,East,2025-11-01,2026-02-22,114
+Hyderabad,Telangana,South,2025-11-05,2026-02-22,110
+Panaji,Goa,West,2025-11-25,2026-03-14,110
+Dehradun,Uttarakhand,North,2025-10-19,2026-01-22,96
+Lucknow,Uttar Pradesh,North,2025-11-01,2026-01-27,88
+Patna,Bihar,East,2025-11-02,2026-01-27,87
+Amaravati,Andhra Pradesh,South,2025-12-04,2026-02-22,81
+New Delhi,Delhi,North,2025-10-19,2025-12-31,74
+Bhubaneswar,Odisha,East,2025-11-02,2026-01-03,63
+Itanagar,Arunachal Pradesh,Northeast,2025-11-24,2026-01-25,63
+Bhopal,Madhya Pradesh,Central,2025-11-26,2026-01-26,62
+Jaipur,Rajasthan,North,2025-10-31,2025-12-31,62
+Leh,Ladakh,North,2025-10-24,2025-12-20,58
+Chandigarh,Chandigarh,North,2025-11-05,2025-12-31,57
+Shimla,Himachal Pradesh,North,2025-11-07,2025-12-31,55
+Bengaluru,Karnataka,South,2025-12-06,2026-01-25,51
+Dispur,Assam,Northeast,2026-01-05,2026-02-24,51
+Srinagar,Jammu and Kashmir,North,2025-11-05,2025-12-20,46
+Shillong,Meghalaya,Northeast,2026-01-12,2026-02-24,44
+Kohima,Nagaland,Northeast,2025-11-24,2026-01-02,40
+Gangtok,Sikkim,Northeast,2025-11-23,2025-12-24,32
+Kavaratti,Lakshadweep,South,2025-12-07,2026-01-03,28
+Chennai,Tamil Nadu,South,2026-01-27,2026-02-20,25
+Puducherry,Puducherry,South,2026-02-13,2026-03-09,25
+Thiruvananthapuram,Kerala,South,2026-02-06,2026-02-20,15
+Sri Vijaya Puram,Andaman and Nicobar Islands,East,2025-11-23,2025-12-05,13

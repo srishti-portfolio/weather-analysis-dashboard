@@ -1,0 +1,9 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    { "name": "Run pipeline (daily)", "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/run_pipeline.py", "cwd": "${workspaceFolder}", "console": "integratedTerminal" },
+    { "name": "Rebuild reports only", "type": "debugpy", "request": "launch",
+      "program": "${workspaceFolder}/run_pipeline.py", "args": ["--reports-only"], "cwd": "${workspaceFolder}", "console": "integratedTerminal" }
+  ]
+}

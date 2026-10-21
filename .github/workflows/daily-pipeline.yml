@@ -1,0 +1,45 @@
+# Runs the pipeline daily in GitHub Actions, commits the updated SQLite DB,
+# and publishes the dashboard to GitHub Pages (Settings > Pages > Source: GitHub Actions).
+name: daily-pipeline
+
+on:
+  schedule:
+    - cron: "30 1 * * *"   # 01:30 UTC = 07:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Tests
+        run: python -m unittest -v
+      - name: Run pipeline
+        run: python run_pipeline.py
+      - name: Commit refreshed database
+        run: |
+          git config user.name "pipeline-bot"
+          git config user.email "pipeline-bot@users.noreply.github.com"
+          git add data/weather.db powerbi/data
+          git diff --cached --quiet || git commit -m "data: daily refresh $(date -u +%F)"
+          git push
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+  deploy:
+    needs: run
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

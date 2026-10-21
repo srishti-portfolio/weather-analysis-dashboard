@@ -1,0 +1,35 @@
+﻿city_id,city,state_ut,state_type,region,capital_of,country,latitude,longitude,timezone
+5,Raipur,Chhattisgarh,State,Central,Chhattisgarh,IN,21.2514,81.6296,Asia/Kolkata
+12,Bhopal,Madhya Pradesh,State,Central,Madhya Pradesh,IN,23.2599,77.4126,Asia/Kolkata
+27,Sri Vijaya Puram,Andaman and Nicobar Islands,Union Territory,East,Andaman and Nicobar Islands,IN,11.6234,92.7265,Asia/Kolkata
+4,Patna,Bihar,State,East,Bihar,IN,25.5941,85.1376,Asia/Kolkata
+9,Ranchi,Jharkhand,State,East,Jharkhand,IN,23.3441,85.3096,Asia/Kolkata
+18,Bhubaneswar,Odisha,State,East,Odisha,IN,20.2961,85.8245,Asia/Kolkata
+26,Kolkata,West Bengal,State,East,West Bengal,IN,22.5726,88.3639,Asia/Kolkata
+28,Chandigarh,Chandigarh,Union Territory,North,Chandigarh; Punjab; Haryana,IN,30.7333,76.7794,Asia/Kolkata
+30,New Delhi,Delhi,Union Territory,North,Delhi,IN,28.6139,77.209,Asia/Kolkata
+8,Shimla,Himachal Pradesh,State,North,Himachal Pradesh,IN,31.1048,77.1734,Asia/Kolkata
+31,Srinagar,Jammu and Kashmir,Union Territory,North,Jammu and Kashmir (summer capital),IN,34.0837,74.7973,Asia/Kolkata
+32,Leh,Ladakh,Union Territory,North,Ladakh,IN,34.1526,77.5771,Asia/Kolkata
+19,Jaipur,Rajasthan,State,North,Rajasthan,IN,26.9124,75.7873,Asia/Kolkata
+24,Lucknow,Uttar Pradesh,State,North,Uttar Pradesh,IN,26.8467,80.9462,Asia/Kolkata
+25,Dehradun,Uttarakhand,State,North,Uttarakhand,IN,30.3165,78.0322,Asia/Kolkata
+2,Itanagar,Arunachal Pradesh,State,Northeast,Arunachal Pradesh,IN,27.0844,93.6053,Asia/Kolkata
+3,Dispur,Assam,State,Northeast,Assam,IN,26.1433,91.7898,Asia/Kolkata
+14,Imphal,Manipur,State,Northeast,Manipur,IN,24.817,93.9368,Asia/Kolkata
+15,Shillong,Meghalaya,State,Northeast,Meghalaya,IN,25.5788,91.8933,Asia/Kolkata
+16,Aizawl,Mizoram,State,Northeast,Mizoram,IN,23.7271,92.7176,Asia/Kolkata
+17,Kohima,Nagaland,State,Northeast,Nagaland,IN,25.6751,94.1086,Asia/Kolkata
+20,Gangtok,Sikkim,State,Northeast,Sikkim,IN,27.3389,88.6065,Asia/Kolkata
+23,Agartala,Tripura,State,Northeast,Tripura,IN,23.8315,91.2868,Asia/Kolkata
+1,Amaravati,Andhra Pradesh,State,South,Andhra Pradesh,IN,16.515,80.516,Asia/Kolkata
+10,Bengaluru,Karnataka,State,South,Karnataka,IN,12.9716,77.5946,Asia/Kolkata
+11,Thiruvananthapuram,Kerala,State,South,Kerala,IN,8.5241,76.9366,Asia/Kolkata
+33,Kavaratti,Lakshadweep,Union Territory,South,Lakshadweep,IN,10.5669,72.642,Asia/Kolkata
+34,Puducherry,Puducherry,Union Territory,South,Puducherry,IN,11.9416,79.8083,Asia/Kolkata
+21,Chennai,Tamil Nadu,State,South,Tamil Nadu,IN,13.0827,80.2707,Asia/Kolkata
+22,Hyderabad,Telangana,State,South,Telangana,IN,17.385,78.4867,Asia/Kolkata
+29,Daman,Dadra and Nagar Haveli and Daman and Diu,Union Territory,West,Dadra and Nagar Haveli and Daman and Diu,IN,20.3974,72.8328,Asia/Kolkata
+6,Panaji,Goa,State,West,Goa,IN,15.4909,73.8278,Asia/Kolkata
+7,Gandhinagar,Gujarat,State,West,Gujarat,IN,23.2156,72.6369,Asia/Kolkata
+13,Mumbai,Maharashtra,State,West,Maharashtra,IN,19.076,72.8777,Asia/Kolkata

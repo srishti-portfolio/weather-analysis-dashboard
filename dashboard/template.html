@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>India Capitals Weather</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7; --surface: #fcfcfb; --border: rgba(11,11,11,0.10);
+    --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --axis: #c3c2b7; --bar-muted: #cfcec7; --chip-on: #0b0b0b; --chip-on-ink: #ffffff;
+    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100;
+    --good: #0ca30c; --warning: #fab219; --critical: #d03b3b;
+    --q0: #f0efec; --q1: #cde2fb; --q2: #9ec5f4; --q3: #6da7ec; --q4: #3987e5; --q5: #256abf; --q6: #184f95; --q7: #0d366b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --border: rgba(255,255,255,0.10);
+      --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --axis: #383835; --bar-muted: #4a4a46; --chip-on: #ffffff; --chip-on-ink: #0b0b0b;
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+      --q0: #262624; --q1: #0d366b; --q2: #104281; --q3: #184f95; --q4: #1c5cab; --q5: #2a78d6; --q6: #5598e7; --q7: #86b6ef;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --border: rgba(255,255,255,0.10);
+    --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --bar-muted: #4a4a46; --chip-on: #ffffff; --chip-on-ink: #0b0b0b;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500;
+    --q0: #262624; --q1: #0d366b; --q2: #104281; --q3: #184f95; --q4: #1c5cab; --q5: #2a78d6; --q6: #5598e7; --q7: #86b6ef;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+         font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 32px 16px 64px; }
+  header h1 { font-size: 24px; margin: 0 0 4px; font-weight: 650; }
+  header p { margin: 0; color: var(--ink-2); }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 24px 0; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+  .kpi .label { color: var(--ink-2); font-size: 13px; }
+  .kpi .value { font-size: 28px; font-weight: 650; margin-top: 4px; }
+  .kpi .sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  section { margin-top: 16px; }
+  h2 { font-size: 16px; margin: 0 0 2px; font-weight: 600; }
+  .desc { color: var(--ink-2); margin: 0 0 12px; font-size: 13px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+  .row .lbl { color: var(--ink-2); font-size: 13px; margin-right: 4px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px;
+          border: 1px solid var(--border); background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; font-size: 13px; }
+  .chip[aria-pressed="true"] { background: var(--chip-on); color: var(--chip-on-ink); border-color: var(--chip-on); }
+  .chip .x { color: var(--muted); font-size: 15px; line-height: 1; }
+  select { font: inherit; font-size: 13px; padding: 4px 8px; border-radius: 8px; border: 1px solid var(--border);
+           background: var(--surface); color: var(--ink); }
+  .sw { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex: none; }
+  .chart { position: relative; width: 100%; }
+  .chart svg { display: block; width: 100%; overflow: visible; }
+  .chart text { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .chart .lbl { fill: var(--ink-2); font-size: 12px; }
+  .chart .bar-hit { cursor: pointer; }
+  .tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border);
+         border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.12);
+         min-width: 150px; opacity: 0; transition: opacity .08s; z-index: 2; }
+  .tip .t { font-weight: 600; margin-bottom: 4px; }
+  .tip .s { color: var(--ink-2); margin: -2px 0 4px; }
+  .tip .r { display: flex; align-items: center; gap: 6px; }
+  .tip .r b { margin-left: auto; padding-left: 12px; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap: 16px; }
+  .tw { overflow-x: auto; }
+  .tw.scroll { max-height: 420px; overflow-y: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { padding: 7px 8px; text-align: left; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+  th { color: var(--ink-2); font-weight: 600; font-size: 12px; position: sticky; top: 0; background: var(--surface); }
+  td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: 0; }
+  .status { display: inline-flex; align-items: center; gap: 5px; font-weight: 600; }
+  .status svg { width: 14px; height: 14px; }
+  .heat td.h { text-align: center; font-variant-numeric: tabular-nums; border: 2px solid var(--surface); border-radius: 4px; min-width: 44px; }
+  .legend { display: flex; align-items: center; gap: 6px; color: var(--ink-2); font-size: 12px; margin-top: 8px; }
+  .legend .ramp { display: flex; } .legend .ramp span { width: 22px; height: 10px; }
+  footer { margin-top: 32px; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>India Capitals Weather</h1>
+    <p id="subtitle"></p>
+  </header>
+
+  <div class="kpis" id="kpis"></div>
+
+  <section class="card">
+    <h2>All capitals ranked, last 30 days</h2>
+    <p class="desc">Click a bar to add or remove that city from the comparison charts below.</p>
+    <div class="row" id="metricRow"></div>
+    <div class="row" id="regionRow"></div>
+    <div class="chart" id="rank"></div>
+  </section>
+
+  <section class="card">
+    <h2>Compare cities</h2>
+    <p class="desc">Pick up to 4 cities. Each keeps its colour while selected.</p>
+    <div class="row" id="compareRow"></div>
+    <h2 style="margin-top:8px">Mean temperature, 7-day rolling average</h2>
+    <p class="desc">Last 120 observed days, °C.</p>
+    <div class="chart" id="trend"></div>
+    <h2 style="margin-top:20px">Monthly rainfall</h2>
+    <p class="desc">Total precipitation per month, mm, last 12 months.</p>
+    <div class="chart" id="rain"></div>
+  </section>
+
+  <section class="card">
+    <h2>Regional rainfall heatmap</h2>
+    <p class="desc">Average rainfall per city in each region, mm per month. Darker means wetter.</p>
+    <div class="tw" id="heat"></div>
+  </section>
+
+  <section class="card">
+    <h2>Last 30 days by city</h2>
+    <p class="desc">From <code>report_city_summary_30d</code>, ranked by average high. Follows the region filter.</p>
+    <div class="tw scroll" id="summaryTable"></div>
+  </section>
+
+  <div class="grid2">
+    <section class="card">
+      <h2>Forecast for compared cities</h2>
+      <p class="desc">High / low °C and rain for the coming days.</p>
+      <div class="tw scroll" id="forecastTable"></div>
+    </section>
+    <section class="card">
+      <h2>Longest dry spell</h2>
+      <p class="desc">Consecutive days with &lt; 1 mm rain (gaps-and-islands query).</p>
+      <div class="tw scroll" id="dryTable"></div>
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section class="card">
+      <h2>Data quality</h2>
+      <p class="desc">Coverage, gaps, nulls and freshness per city. Issues are listed first.</p>
+      <div class="tw scroll" id="qualityTable"></div>
+    </section>
+    <section class="card">
+      <h2>Recent pipeline runs</h2>
+      <p class="desc">From the <code>pipeline_runs</code> audit table.</p>
+      <div class="tw" id="runsTable"></div>
+    </section>
+  </div>
+
+  <footer>Data: Open-Meteo (open-meteo.com), CC BY 4.0. Generated by run_pipeline.py.</footer>
+</main>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+/* ---------- state ---------- */
+const SLOT_VARS = ["--s1", "--s2", "--s3", "--s4"];
+const slots = [null, null, null, null];           // city in each colour slot; colours never shift
+(DATA.compare_default.length ? DATA.compare_default : DATA.cities.slice(0, 4).map(c => c.city))
+  .forEach((c, i) => { slots[i] = c; });
+let region = "All";
+let metric = "avg_high_c";
+const META = Object.fromEntries(DATA.cities.map(c => [c.city, c]));
+
+/* ---------- helpers ---------- */
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const selected = () => slots.filter(Boolean);
+const slotOf = city => slots.indexOf(city);
+const colorOf = city => slotOf(city) >= 0 ? css(SLOT_VARS[slotOf(city)]) : css("--bar-muted");
+const inRegion = r => region === "All" || r.region === region;
+const NS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs = {}, parent) => {
+  const n = document.createElementNS(NS, tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  if (parent) parent.appendChild(n);
+  return n;
+};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmtDate = iso => new Date(iso + "T00:00:00").toLocaleDateString(undefined, { day: "numeric", month: "short" });
+const fmtMonth = ym => new Date(ym + "-01T00:00:00").toLocaleDateString(undefined, { month: "short", year: "2-digit" });
+const num = (v, d = 1) => v == null ? "–" : Number(v).toFixed(d);
+
+function toggleCity(city) {
+  const i = slotOf(city);
+  if (i >= 0) { if (selected().length > 1) slots[i] = null; }
+  else {
+    const free = slots.indexOf(null);
+    if (free < 0) return flash("You can compare up to 4 cities. Remove one first.");
+    slots[free] = city;
+  }
+  renderAll();
+}
+function flash(msg) {
+  const row = document.getElementById("compareRow");
+  let n = row.querySelector(".desc"); if (!n) { n = document.createElement("span"); n.className = "desc"; row.appendChild(n); }
+  n.textContent = msg; n.style.margin = "0";
+  clearTimeout(flash.t); flash.t = setTimeout(() => n.remove(), 2500);
+}
+
+function niceTicks(min, max, count = 5) {
+  const span = max - min || 1;
+  const step0 = span / count;
+  const mag = Math.pow(10, Math.floor(Math.log10(step0)));
+  const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= step0);
+  const lo = Math.floor(min / step) * step, hi = Math.ceil(max / step) * step;
+  const ticks = [];
+  for (let v = lo; v <= hi + step / 2; v += step) ticks.push(+v.toFixed(6));
+  return ticks;
+}
+
+const STATUS_ICON = {
+  PASS: '<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="var(--good)"/><path d="M4.8 8.2l2.1 2.1 4.3-4.4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  WARN: '<svg viewBox="0 0 16 16"><path d="M8 1.5l7 12.5H1z" fill="var(--warning)"/><path d="M8 6v3.6M8 11.6v.1" stroke="#0b0b0b" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  FAIL: '<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="7" fill="var(--critical)"/><path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>',
+};
+STATUS_ICON.success = STATUS_ICON.PASS; STATUS_ICON.failed = STATUS_ICON.FAIL;
+STATUS_ICON.partial = STATUS_ICON.WARN; STATUS_ICON.running = STATUS_ICON.WARN;
+const statusBadge = s => `<span class="status">${STATUS_ICON[s] || ""}${esc(s)}</span>`;
+
+function table(id, cols, rows) {
+  const head = cols.map(c => `<th class="${c.n ? "n" : ""}">${esc(c.h)}</th>`).join("");
+  const body = rows.map(r => "<tr>" + cols.map(c => {
+    const v = c.f ? c.f(r) : esc(r[c.k]);
+    return `<td class="${c.n ? "n" : ""}">${v}</td>`;
+  }).join("") + "</tr>").join("");
+  document.getElementById(id).innerHTML = rows.length
+    ? `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`
+    : `<p class="desc">No rows for this selection.</p>`;
+}
+const cityCell = r => slotOf(r.city) >= 0
+  ? `<span class="status" style="font-weight:500"><span class="sw" style="background:${colorOf(r.city)}"></span>${esc(r.city)}</span>`
+  : esc(r.city);
+
+function tooltip(host) {
+  let t = host.querySelector(".tip");
+  if (!t) { t = document.createElement("div"); t.className = "tip"; host.appendChild(t); }
+  return {
+    show(html, x, y) {
+      t.innerHTML = html; t.style.opacity = 1;
+      const w = t.offsetWidth, hw = host.clientWidth;
+      t.style.left = Math.min(Math.max(0, x + 14 + w > hw ? x - w - 14 : x + 14), hw - w) + "px";
+      t.style.top = Math.max(0, y - 20) + "px";
+    },
+    hide() { t.style.opacity = 0; },
+  };
+}
+
+/* ---------- KPIs ---------- */
+function renderKpis() {
+  const last = DATA.runs[0] || {};
+  const passes = DATA.quality.filter(q => q.status === "PASS").length;
+  const latest = DATA.quality.map(q => q.last_date).sort().pop();
+  const tiles = [
+    { label: "Capital cities tracked", value: DATA.cities.length, sub: `covering ${DATA.states_covered} states & UTs` },
+    { label: "Observed city-days", value: DATA.total_rows.toLocaleString(), sub: latest ? `through ${fmtDate(latest)}` : "" },
+    { label: "Last run", value: statusBadge(last.status || "–"), sub: last.started_at ? `${last.rows_upserted} rows upserted, ${last.api_calls} API calls` : "" },
+    { label: "Quality checks", value: `${passes}/${DATA.quality.length}`, sub: "cities passing all checks" },
+  ];
+  document.getElementById("kpis").innerHTML = tiles.map(t =>
+    `<div class="card kpi"><div class="label">${t.label}</div><div class="value">${t.value}</div><div class="sub">${esc(t.sub)}</div></div>`).join("");
+  document.getElementById("subtitle").textContent =
+    `Daily ETL for every state and UT capital, from the Open-Meteo API into SQLite. Refreshed ${new Date(DATA.generated_at).toLocaleString()}.`;
+}
+
+/* ---------- controls ---------- */
+function chipRow(id, label, items, isOn, onClick) {
+  const row = document.getElementById(id);
+  row.innerHTML = `<span class="lbl">${label}</span>`;
+  items.forEach(([key, text]) => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.textContent = text;
+    b.setAttribute("aria-pressed", isOn(key));
+    b.onclick = () => onClick(key);
+    row.appendChild(b);
+  });
+}
+function renderControls() {
+  chipRow("metricRow", "Rank by", [["avg_high_c", "Avg high °C"], ["avg_low_c", "Avg low °C"], ["total_rain_mm", "Total rain mm"]],
+    k => k === metric, k => { metric = k; renderRank(); });
+  chipRow("regionRow", "Region", [["All", "All regions"], ...DATA.regions.map(r => [r, r])],
+    k => k === region, k => { region = k; renderControls(); renderRank(); renderTables(); });
+
+  const row = document.getElementById("compareRow");
+  row.innerHTML = "";
+  slots.forEach(city => {
+    if (!city) return;
+    const b = document.createElement("button");
+    b.className = "chip";
+    b.title = "Remove from comparison";
+    b.innerHTML = `<span class="sw" style="background:${colorOf(city)}"></span>${esc(city)}<span class="x" aria-hidden="true">×</span>`;
+    b.setAttribute("aria-label", `Remove ${city}`);
+    b.onclick = () => toggleCity(city);
+    row.appendChild(b);
+  });
+  if (selected().length < 4) {
+    const sel = document.createElement("select");
+    sel.setAttribute("aria-label", "Add a city to compare");
+    sel.innerHTML = `<option value="">+ Add city…</option>` + DATA.regions.map(r =>
+      `<optgroup label="${esc(r)}">` + DATA.cities.filter(c => c.region === r && slotOf(c.city) < 0)
+        .map(c => `<option value="${esc(c.city)}">${esc(c.city)} (${esc(c.state_ut)})</option>`).join("") + `</optgroup>`).join("");
+    sel.onchange = () => sel.value && toggleCity(sel.value);
+    row.appendChild(sel);
+  }
+}
+
+/* ---------- ranked bars: every capital ---------- */
+function renderRank() {
+  const host = document.getElementById("rank");
+  host.querySelectorAll("svg").forEach(s => s.remove());
+  const rows = DATA.summary.filter(inRegion).filter(r => r[metric] != null)
+    .sort((a, b) => b[metric] - a[metric] || a.city.localeCompare(b.city));
+  if (!rows.length) return;
+  const W = Math.max(host.clientWidth, 320), rowH = 20;
+  const m = { t: 4, r: 48, b: 22, l: Math.min(150, W * 0.36) };
+  const H = m.t + m.b + rows.length * rowH;
+  const max = Math.max(...rows.map(r => r[metric]));
+  const ticks = niceTicks(0, max, 4), top = ticks[ticks.length - 1];
+  const x = v => m.l + v / top * (W - m.l - m.r);
+  const unit = metric === "total_rain_mm" ? " mm" : "°C";
+
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H, role: "img",
+    "aria-label": `Bar chart ranking ${rows.length} capitals by ${metric}` }, host);
+  ticks.forEach(v => {
+    el("line", { x1: x(v), x2: x(v), y1: m.t, y2: H - m.b, stroke: v === 0 ? css("--axis") : css("--grid"), "stroke-width": 1 }, svg);
+    el("text", { x: x(v), y: H - 6, "text-anchor": "middle" }, svg).textContent = v;
+  });
+  const tip = tooltip(host);
+  rows.forEach((r, i) => {
+    const y = m.t + i * rowH, bh = rowH - 6, by = y + 3;
+    const w = Math.max(0, x(r[metric]) - x(0)), rr = Math.min(4, w / 2, bh / 2);
+    el("text", { x: m.l - 8, y: y + rowH / 2 + 4, "text-anchor": "end", class: "lbl" }, svg).textContent = r.city;
+    el("path", { d: `M${x(0)},${by}H${x(0) + w - rr}Q${x(0) + w},${by} ${x(0) + w},${by + rr}V${by + bh - rr}Q${x(0) + w},${by + bh} ${x(0) + w - rr},${by + bh}H${x(0)}Z`,
+      fill: colorOf(r.city) }, svg);
+    el("text", { x: x(0) + w + 6, y: y + rowH / 2 + 4 }, svg).textContent = num(r[metric]);
+    const hit = el("rect", { x: 0, y, width: W, height: rowH, fill: "transparent", class: "bar-hit" }, svg);
+    hit.addEventListener("pointermove", ev => tip.show(
+      `<div class="t">${esc(r.city)}</div><div class="s">${esc(r.state_ut)} · ${esc(r.region)}</div>` +
+      `<div class="r">Rank<b>#${r[metric === "total_rain_mm" ? "wet_rank" : "hot_rank"] ?? "–"}</b></div>` +
+      `<div class="r">Avg high<b>${num(r.avg_high_c)}°C</b></div><div class="r">Avg low<b>${num(r.avg_low_c)}°C</b></div>` +
+      `<div class="r">Rain<b>${num(r.total_rain_mm)} mm</b></div>` +
+      `<div class="s" style="margin-top:4px">${slotOf(r.city) >= 0 ? "Click to remove from comparison" : "Click to compare"}</div>`,
+      ev.offsetX, ev.offsetY));
+    hit.addEventListener("pointerleave", () => tip.hide());
+    hit.addEventListener("click", () => toggleCity(r.city));
+  });
+}
+
+/* ---------- line chart: compared cities ---------- */
+function renderTrend() {
+  const host = document.getElementById("trend");
+  host.querySelectorAll("svg").forEach(s => s.remove());
+  const W = Math.max(host.clientWidth, 320), H = 300, m = { t: 12, r: W < 560 ? 12 : 120, b: 26, l: 36 };
+  const cities = selected();
+  const byCity = Object.fromEntries(cities.map(c => [c, DATA.trend.filter(r => r.city === c && r.temp_7d_avg_c != null)]));
+  const dates = [...new Set(DATA.trend.map(r => r.obs_date))].sort();
+  const vals = cities.flatMap(c => byCity[c].map(r => r.temp_7d_avg_c));
+  if (!dates.length || !vals.length) return;
+  const ticks = niceTicks(Math.min(...vals), Math.max(...vals));
+  const y0 = ticks[0], y1 = ticks[ticks.length - 1];
+  const t0 = Date.parse(dates[0]), t1 = Date.parse(dates[dates.length - 1]);
+  const x = d => m.l + (Date.parse(d) - t0) / (t1 - t0 || 1) * (W - m.l - m.r);
+  const y = v => m.t + (1 - (v - y0) / (y1 - y0)) * (H - m.t - m.b);
+
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H, role: "img",
+    "aria-label": "Line chart of 7-day rolling mean temperature for the compared cities" }, host);
+  ticks.forEach(v => {
+    el("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: v === y0 ? css("--axis") : css("--grid"), "stroke-width": 1 }, svg);
+    el("text", { x: m.l - 6, y: y(v) + 4, "text-anchor": "end" }, svg).textContent = v + "°";
+  });
+  const step = Math.ceil(dates.length / Math.max(2, Math.floor((W - m.l - m.r) / 90)));
+  dates.forEach((d, i) => { if (!(i % step)) el("text", { x: x(d), y: H - 6, "text-anchor": "middle" }, svg).textContent = fmtDate(d); });
+
+  const ends = [];
+  cities.forEach(c => {
+    const pts = byCity[c];
+    if (!pts.length) return;
+    el("path", { d: pts.map((r, i) => `${i ? "L" : "M"}${x(r.obs_date).toFixed(1)},${y(r.temp_7d_avg_c).toFixed(1)}`).join(""),
+      fill: "none", stroke: colorOf(c), "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }, svg);
+    const last = pts[pts.length - 1];
+    ends.push({ c, y: y(last.temp_7d_avg_c), x: x(last.obs_date) });
+  });
+  if (m.r > 40) {
+    ends.sort((a, b) => a.y - b.y);
+    for (let i = 1; i < ends.length; i++) ends[i].y = Math.max(ends[i].y, ends[i - 1].y + 14);
+    ends.forEach(e => { el("text", { x: e.x + 8, y: e.y + 4, class: "lbl" }, svg).textContent = e.c; });
+  }
+
+  const cross = el("line", { y1: m.t, y2: H - m.b, stroke: css("--axis"), "stroke-width": 1, opacity: 0 }, svg);
+  const dots = cities.map(c => el("circle", { r: 4, fill: colorOf(c), stroke: css("--surface"), "stroke-width": 2, opacity: 0 }, svg));
+  const tip = tooltip(host);
+  const hit = el("rect", { x: m.l, y: m.t, width: W - m.l - m.r, height: H - m.t - m.b, fill: "transparent" }, svg);
+  hit.addEventListener("pointermove", ev => {
+    const px = ev.offsetX * (W / svg.clientWidth);
+    const d = dates.reduce((best, d) => Math.abs(x(d) - px) < Math.abs(x(best) - px) ? d : best, dates[0]);
+    cross.setAttribute("x1", x(d)); cross.setAttribute("x2", x(d)); cross.setAttribute("opacity", 1);
+    const rows = cities.map((c, i) => {
+      const r = byCity[c].find(r => r.obs_date === d);
+      if (r) { dots[i].setAttribute("cx", x(d)); dots[i].setAttribute("cy", y(r.temp_7d_avg_c)); dots[i].setAttribute("opacity", 1); }
+      else dots[i].setAttribute("opacity", 0);
+      return r ? { c, v: r.temp_7d_avg_c } : null;
+    }).filter(Boolean).sort((a, b) => b.v - a.v);
+    tip.show(`<div class="t">${fmtDate(d)}</div>` + rows.map(r =>
+      `<div class="r"><span class="sw" style="background:${colorOf(r.c)}"></span>${esc(r.c)}<b>${num(r.v)}°C</b></div>`).join(""),
+      ev.offsetX, ev.offsetY);
+  });
+  hit.addEventListener("pointerleave", () => { tip.hide(); cross.setAttribute("opacity", 0); dots.forEach(d => d.setAttribute("opacity", 0)); });
+}
+
+/* ---------- grouped bars: monthly rainfall for compared cities ---------- */
+function renderRain() {
+  const host = document.getElementById("rain");
+  host.querySelectorAll("svg").forEach(s => s.remove());
+  const cities = selected();
+  const months = [...new Set(DATA.monthly.map(r => r.month))].sort().slice(-12);
+  if (!months.length || !cities.length) return;
+  const W = Math.max(host.clientWidth, 320), H = 260, m = { t: 12, r: 8, b: 26, l: 44 };
+  const val = (c, mo) => (DATA.monthly.find(r => r.city === c && r.month === mo) || {}).total_rain_mm;
+  const max = Math.max(1, ...months.flatMap(mo => cities.map(c => val(c, mo) || 0)));
+  const ticks = niceTicks(0, max, 4), top = ticks[ticks.length - 1];
+  const y = v => m.t + (1 - v / top) * (H - m.t - m.b);
+  const band = (W - m.l - m.r) / months.length;
+  const groupPad = Math.max(4, band * 0.18), gap = 2;
+  const bw = Math.max(2, (band - groupPad - gap * (cities.length - 1)) / cities.length);
+
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H, role: "img",
+    "aria-label": "Grouped bar chart of monthly rainfall for the compared cities" }, host);
+  ticks.forEach(v => {
+    el("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: v === 0 ? css("--axis") : css("--grid"), "stroke-width": 1 }, svg);
+    el("text", { x: m.l - 6, y: y(v) + 4, "text-anchor": "end" }, svg).textContent = v;
+  });
+  const every = band < 36 ? 2 : 1;
+  const tip = tooltip(host);
+  months.forEach((mo, i) => {
+    const gx = m.l + i * band + groupPad / 2;
+    if (i % every === 0) el("text", { x: m.l + i * band + band / 2, y: H - 6, "text-anchor": "middle" }, svg).textContent = fmtMonth(mo);
+    cities.forEach((c, j) => {
+      const v = val(c, mo);
+      if (v == null) return;
+      const bx = gx + j * (bw + gap), by = y(v), bh = y(0) - by;
+      const r = Math.min(4, bw / 2, bh);
+      el("path", { d: `M${bx},${y(0)}V${by + r}Q${bx},${by} ${bx + r},${by}H${bx + bw - r}Q${bx + bw},${by} ${bx + bw},${by + r}V${y(0)}Z`,
+        fill: colorOf(c) }, svg);
+      const hit = el("rect", { x: bx - gap / 2, y: m.t, width: bw + gap, height: H - m.t - m.b, fill: "transparent" }, svg);
+      hit.addEventListener("pointermove", ev => tip.show(
+        `<div class="t">${fmtMonth(mo)}</div><div class="r"><span class="sw" style="background:${colorOf(c)}"></span>${esc(c)}<b>${num(v)} mm</b></div>`,
+        ev.offsetX, ev.offsetY));
+      hit.addEventListener("pointerleave", () => tip.hide());
+    });
+  });
+}
+
+/* ---------- heatmap: region x month ---------- */
+function renderHeat() {
+  const months = [...new Set(DATA.region_monthly.map(r => r.month))].sort().slice(-12);
+  const get = (rg, mo) => (DATA.region_monthly.find(r => r.region === rg && r.month === mo) || {}).avg_rain_per_city_mm;
+  const max = Math.max(1, ...DATA.region_monthly.filter(r => months.includes(r.month)).map(r => r.avg_rain_per_city_mm || 0));
+  const STEPS = 8;
+  const step = v => v == null ? null : v <= 0.5 ? 0 : Math.min(STEPS - 1, 1 + Math.floor(v / max * (STEPS - 1)));
+  const darkMode = css("--q0") !== "#f0efec";
+  const ink = s => s == null ? "var(--muted)" : (darkMode ? (s >= 5 ? "#0b0b0b" : "#ffffff") : (s >= 4 ? "#ffffff" : "#0b0b0b"));
+  const head = `<th>Region</th>` + months.map(mo => `<th class="n">${fmtMonth(mo)}</th>`).join("");
+  const body = DATA.regions.map(rg => `<tr><td>${esc(rg)}</td>` + months.map(mo => {
+    const v = get(rg, mo), s = step(v);
+    return `<td class="h" style="background:${s == null ? "transparent" : `var(--q${s})`};color:${ink(s)}" title="${esc(rg)}, ${fmtMonth(mo)}: ${num(v)} mm per city">${v == null ? "–" : Math.round(v)}</td>`;
+  }).join("") + "</tr>").join("");
+  document.getElementById("heat").innerHTML =
+    `<table class="heat"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>` +
+    `<div class="legend">0 mm<span class="ramp">${Array.from({ length: STEPS }, (_, i) => `<span style="background:var(--q${i})"></span>`).join("")}</span>${Math.round(max)} mm</div>`;
+}
+
+/* ---------- tables ---------- */
+const WMO = { 0: "Clear", 1: "Mostly clear", 2: "Partly cloudy", 3: "Overcast", 45: "Fog", 48: "Fog",
+  51: "Drizzle", 53: "Drizzle", 55: "Drizzle", 61: "Light rain", 63: "Rain", 65: "Heavy rain",
+  80: "Showers", 81: "Showers", 82: "Heavy showers", 95: "Thunderstorm", 96: "Thunderstorm", 99: "Thunderstorm" };
+
+function renderTables() {
+  table("summaryTable", [
+    { h: "#", k: "hot_rank", n: 1 }, { h: "City", f: cityCell }, { h: "State / UT", k: "state_ut" }, { h: "Region", k: "region" },
+    { h: "Avg high °C", k: "avg_high_c", n: 1 }, { h: "Avg low °C", k: "avg_low_c", n: 1 },
+    { h: "Peak °C", k: "peak_high_c", n: 1 }, { h: "Rain mm", k: "total_rain_mm", n: 1 },
+    { h: "Rainy days", k: "rainy_days", n: 1 }, { h: "Max wind km/h", k: "max_wind_kmh", n: 1 },
+  ], DATA.summary.filter(inRegion));
+
+  table("forecastTable", [
+    { h: "City", f: cityCell }, { h: "Date", f: r => fmtDate(r.obs_date) },
+    { h: "High/Low °C", n: 1, f: r => `${num(r.temp_max_c)} / ${num(r.temp_min_c)}` },
+    { h: "Rain mm", k: "precip_mm", n: 1 }, { h: "Conditions", f: r => esc(WMO[r.weather_code] ?? `Code ${r.weather_code}`) },
+  ], DATA.forecast.filter(r => slotOf(r.city) >= 0).sort((a, b) => slotOf(a.city) - slotOf(b.city) || a.obs_date.localeCompare(b.obs_date)));
+
+  table("dryTable", [
+    { h: "City", f: cityCell }, { h: "Region", k: "region" }, { h: "Days", k: "length_days", n: 1 },
+    { h: "From", f: r => fmtDate(r.start_date) }, { h: "To", f: r => fmtDate(r.end_date) },
+  ], DATA.dry.filter(inRegion));
+
+  table("qualityTable", [
+    { h: "City", f: cityCell }, { h: "Rows", k: "row_count", n: 1 }, { h: "Missing", k: "missing_days", n: 1 },
+    { h: "Nulls", k: "null_rows", n: 1 }, { h: "Stale (d)", k: "staleness_days", n: 1 },
+    { h: "Status", f: r => statusBadge(r.status) },
+  ], DATA.quality.filter(inRegion));
+
+  table("runsTable", [
+    { h: "Run", k: "run_id", n: 1 },
+    { h: "Started (UTC)", f: r => esc((r.started_at || "").replace("T", " ").slice(0, 16)) },
+    { h: "Status", f: r => statusBadge(r.status) + (r.error ? `<div class="desc" style="margin:2px 0 0;white-space:normal">${esc(r.error.slice(0, 120))}</div>` : "") },
+    { h: "Rows", k: "rows_upserted", n: 1 }, { h: "API calls", k: "api_calls", n: 1 },
+  ], DATA.runs);
+}
+
+function renderAll() { renderKpis(); renderControls(); renderRank(); renderTrend(); renderRain(); renderHeat(); renderTables(); }
+renderAll();
+// Re-draw when the chart area changes size (window resize, or a tab that loaded while hidden).
+let rt, lastW = 0;
+new ResizeObserver(([e]) => {
+  const w = Math.round(e.contentRect.width);
+  if (w === lastW) return;
+  lastW = w; clearTimeout(rt); rt = setTimeout(() => { renderRank(); renderTrend(); renderRain(); }, 120);
+}).observe(document.getElementById("trend"));
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", renderAll);
+</script>
+</body>
+</html>
