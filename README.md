@@ -28,32 +28,32 @@ filtered by region, and pages 3–5 let you compare up to 4 cities.
 ### 1. National Overview
 All 34 capitals on a map of India, with the hottest and wettest capitals of the last 30 days.
 
-![National Overview](images/1_national_overview.png)
+<img width="1213" height="673" alt="Weather_Analysis_Dashboard_National_Overview" src="https://github.com/user-attachments/assets/0c3e4021-e374-4257-86e0-af37975b8736" />
 
 ### 2. Regional Overview
 Monthly rainfall heatmap by region, showing when the monsoon arrives in each part of India.
 
-![Regional Overview](images/2_regional_overview.png)
+<img width="1203" height="681" alt="Weather_Analysis_Dashboard_Regional_Overview" src="https://github.com/user-attachments/assets/385f49c3-5987-41cd-908d-18b60e668da1" />
 
 ### 3. City Temperature
 7-day rolling temperature for selected cities, the biggest day/night temperature gaps, and month-over-month change.
 
-![City Temperature](images/3_city_temperature.png)
+<img width="1219" height="695" alt="Weather_Analysis_Dashboard_City_Temperature" src="https://github.com/user-attachments/assets/f219e93d-30fd-47d7-a3de-2d340a52134a" />
 
 ### 4. Rainfall & Dry Spells
 Monthly rainfall, rainy days per month for every capital, and the longest run of dry days.
 
-![Rainfall and Dry Spells](images/4_rainfall_dry_spells.png)
+<img width="1205" height="680" alt="Weather_Analysis_Dashboard_Rainfall DrySpells" src="https://github.com/user-attachments/assets/83c938a8-4ff9-44f7-97a5-bf65679398f3" />
 
 ### 5. 7 Day Forecast
 Heavy-rain risk for all capitals over the next 7 days, with daily highs, lows and conditions.
 
-![7 Day Forecast](images/5_forecast.png)
+<img width="1198" height="680" alt="Weather_Analysis_Dashboard_7Day_Forecast" src="https://github.com/user-attachments/assets/c9dbebe2-c5ed-4a87-8751-7095206401a1" />
 
 ### 6. Pipeline Health and Data Quality
 Status of every pipeline run and data-quality checks for each city.
 
-![Pipeline Health and Data Quality](images/6_pipeline_health.png)
+<img width="1200" height="677" alt="Weather_Analysis_Dashboard_PipelineHealth_and_DataQuality" src="https://github.com/user-attachments/assets/a4d40938-9d4f-486b-839b-6dd7e90381d4" />
 
 ## Quick start
 
