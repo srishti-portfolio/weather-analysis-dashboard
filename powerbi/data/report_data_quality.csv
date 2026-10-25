@@ -1,35 +1,35 @@
 ﻿city,state_ut,region,first_date,last_date,row_count,missing_days,null_rows,invalid_rows,staleness_days,status
-Agartala,Tripura,Northeast,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Aizawl,Mizoram,Northeast,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Amaravati,Andhra Pradesh,South,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Bengaluru,Karnataka,South,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Bhopal,Madhya Pradesh,Central,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Bhubaneswar,Odisha,East,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Chandigarh,Chandigarh,North,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Chennai,Tamil Nadu,South,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Daman,Dadra and Nagar Haveli and Daman and Diu,West,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Dehradun,Uttarakhand,North,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Dispur,Assam,Northeast,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Gandhinagar,Gujarat,West,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Gangtok,Sikkim,Northeast,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Hyderabad,Telangana,South,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Imphal,Manipur,Northeast,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Itanagar,Arunachal Pradesh,Northeast,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Jaipur,Rajasthan,North,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Kavaratti,Lakshadweep,South,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Kohima,Nagaland,Northeast,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Kolkata,West Bengal,East,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Leh,Ladakh,North,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Lucknow,Uttar Pradesh,North,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Mumbai,Maharashtra,West,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-New Delhi,Delhi,North,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Panaji,Goa,West,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Patna,Bihar,East,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Puducherry,Puducherry,South,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Raipur,Chhattisgarh,Central,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Ranchi,Jharkhand,East,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Shillong,Meghalaya,Northeast,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Shimla,Himachal Pradesh,North,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Sri Vijaya Puram,Andaman and Nicobar Islands,East,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Srinagar,Jammu and Kashmir,North,2025-10-19,2026-10-23,370,0,0,0,1,PASS
-Thiruvananthapuram,Kerala,South,2025-10-19,2026-10-23,370,0,0,0,1,PASS
+Agartala,Tripura,Northeast,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Aizawl,Mizoram,Northeast,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Amaravati,Andhra Pradesh,South,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Bengaluru,Karnataka,South,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Bhopal,Madhya Pradesh,Central,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Bhubaneswar,Odisha,East,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Chandigarh,Chandigarh,North,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Chennai,Tamil Nadu,South,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Daman,Dadra and Nagar Haveli and Daman and Diu,West,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Dehradun,Uttarakhand,North,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Dispur,Assam,Northeast,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Gandhinagar,Gujarat,West,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Gangtok,Sikkim,Northeast,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Hyderabad,Telangana,South,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Imphal,Manipur,Northeast,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Itanagar,Arunachal Pradesh,Northeast,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Jaipur,Rajasthan,North,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Kavaratti,Lakshadweep,South,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Kohima,Nagaland,Northeast,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Kolkata,West Bengal,East,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Leh,Ladakh,North,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Lucknow,Uttar Pradesh,North,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Mumbai,Maharashtra,West,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+New Delhi,Delhi,North,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Panaji,Goa,West,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Patna,Bihar,East,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Puducherry,Puducherry,South,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Raipur,Chhattisgarh,Central,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Ranchi,Jharkhand,East,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Shillong,Meghalaya,Northeast,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Shimla,Himachal Pradesh,North,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Sri Vijaya Puram,Andaman and Nicobar Islands,East,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Srinagar,Jammu and Kashmir,North,2025-10-19,2026-10-24,371,0,0,0,1,PASS
+Thiruvananthapuram,Kerala,South,2025-10-19,2026-10-24,371,0,0,0,1,PASS
