@@ -1,35 +1,35 @@
 ﻿city,state_ut,state_type,region,latitude,longitude,days,avg_high_c,avg_low_c,peak_high_c,peak_date,total_rain_mm,rainy_days,max_wind_kmh,hot_rank,wet_rank
-Mumbai,Maharashtra,State,West,19.076,72.8777,30,36.2,27.0,38.2,2026-10-13,20.9,9,16.8,1,26
-Gandhinagar,Gujarat,State,West,23.2156,72.6369,30,35.1,23.3,36.6,2026-10-14,0.0,0,15.9,2,34
-Panaji,Goa,State,West,15.4909,73.8278,30,33.9,25.5,37.5,2026-10-13,43.5,8,20.7,3,15
-Daman,Dadra and Nagar Haveli and Daman and Diu,Union Territory,West,20.3974,72.8328,30,33.2,24.6,34.5,2026-10-22,4.5,1,22.5,4,32
-Jaipur,Rajasthan,State,North,26.9124,75.7873,30,33.1,22.6,36.2,2026-10-04,12.1,1,18.4,5,30
-Amaravati,Andhra Pradesh,State,South,16.515,80.516,30,32.9,25.7,34.9,2026-10-10,144.1,12,38.8,6,5
-Kolkata,West Bengal,State,East,22.5726,88.3639,30,32.6,25.4,34.9,2026-10-27,33.8,13,14.0,7,21
-Bhopal,Madhya Pradesh,State,Central,23.2599,77.4126,30,32.5,22.0,34.5,2026-10-09,4.1,2,17.8,8,33
-Hyderabad,Telangana,State,South,17.385,78.4867,30,32.5,24.0,33.9,2026-10-15,6.8,3,18.7,9,31
-Agartala,Tripura,State,Northeast,23.8315,91.2868,30,32.2,23.8,33.9,2026-10-13,36.9,11,19.1,10,19
-Chennai,Tamil Nadu,State,South,13.0827,80.2707,30,32.2,26.3,35.4,2026-10-06,265.6,18,20.7,11,2
-Dispur,Assam,State,Northeast,26.1433,91.7898,30,31.8,22.3,33.7,2026-09-30,36.3,8,17.0,12,20
-Bhubaneswar,Odisha,State,East,20.2961,85.8245,30,31.8,24.8,33.9,2026-10-04,93.9,10,21.8,13,9
-Raipur,Chhattisgarh,State,Central,21.2514,81.6296,30,31.8,22.5,34.2,2026-10-09,40.6,2,26.0,14,17
-Puducherry,Puducherry,Union Territory,South,11.9416,79.8083,30,31.7,26.3,34.4,2026-09-30,236.5,15,24.9,15,3
-New Delhi,Delhi,Union Territory,North,28.6139,77.209,30,31.4,21.9,35.7,2026-10-05,27.7,6,16.4,16,23
-Lucknow,Uttar Pradesh,State,North,26.8467,80.9462,30,31.2,22.4,32.8,2026-10-04,14.1,4,17.9,17,29
-Sri Vijaya Puram,Andaman and Nicobar Islands,Union Territory,East,11.6234,92.7265,30,31.2,24.7,32.3,2026-10-19,220.7,28,21.6,18,4
-Patna,Bihar,State,East,25.5941,85.1376,30,30.9,23.3,32.6,2026-10-05,20.6,6,18.2,19,27
-Thiruvananthapuram,Kerala,State,South,8.5241,76.9366,30,30.7,24.4,33.8,2026-10-01,375.4,27,17.8,20,1
-Kavaratti,Lakshadweep,Union Territory,South,10.5669,72.642,30,30.5,28.4,31.6,2026-10-15,107.1,9,26.4,21,8
-Itanagar,Arunachal Pradesh,State,Northeast,27.0844,93.6053,30,29.3,19.6,32.4,2026-09-29,46.9,7,18.0,22,14
-Chandigarh,Chandigarh,Union Territory,North,30.7333,76.7794,30,29.1,19.2,32.1,2026-10-03,21.4,3,18.7,23,24
-Bengaluru,Karnataka,State,South,12.9716,77.5946,30,28.5,20.2,30.8,2026-10-15,121.0,14,18.2,24,7
-Imphal,Manipur,State,Northeast,24.817,93.9368,30,27.9,19.5,30.2,2026-09-29,65.9,14,12.9,25,12
-Ranchi,Jharkhand,State,East,23.3441,85.3096,30,27.1,18.9,29.0,2026-10-04,21.4,6,20.3,26,24
-Dehradun,Uttarakhand,State,North,30.3165,78.0322,30,26.4,17.1,28.9,2026-10-01,42.9,6,11.0,27,16
-Aizawl,Mizoram,State,Northeast,23.7271,92.7176,30,26.0,17.4,28.7,2026-09-29,79.4,15,10.5,28,10
-Shillong,Meghalaya,State,Northeast,25.5788,91.8933,30,24.2,14.9,26.5,2026-09-29,50.9,14,12.6,29,13
-Kohima,Nagaland,State,Northeast,25.6751,94.1086,30,23.6,14.7,25.8,2026-09-29,132.4,23,9.9,30,6
-Gangtok,Sikkim,State,Northeast,27.3389,88.6065,30,22.7,12.5,25.9,2026-09-30,38.8,11,7.7,31,18
-Srinagar,Jammu and Kashmir,Union Territory,North,34.0837,74.7973,30,21.7,8.7,28.1,2026-10-05,74.0,6,14.9,32,11
-Shimla,Himachal Pradesh,State,North,31.1048,77.1734,30,18.6,6.8,21.5,2026-10-02,31.1,11,14.5,33,22
-Leh,Ladakh,Union Territory,North,34.1526,77.5771,30,10.0,0.2,19.2,2026-10-04,15.1,5,19.1,34,28
+Mumbai,Maharashtra,State,West,19.076,72.8777,30,36.3,27.0,38.2,2026-10-13,18.9,9,16.8,1,27
+Gandhinagar,Gujarat,State,West,23.2156,72.6369,30,35.1,23.2,36.6,2026-10-14,0.4,0,16.2,2,34
+Panaji,Goa,State,West,15.4909,73.8278,30,33.9,25.5,37.5,2026-10-13,42.3,7,20.7,3,21
+Daman,Dadra and Nagar Haveli and Daman and Diu,Union Territory,West,20.3974,72.8328,30,33.3,24.6,34.5,2026-10-22,1.1,0,22.5,4,33
+Jaipur,Rajasthan,State,North,26.9124,75.7873,30,33.0,22.5,36.2,2026-10-04,16.1,2,18.4,5,28
+Amaravati,Andhra Pradesh,State,South,16.515,80.516,30,32.8,25.6,34.9,2026-10-10,144.0,12,38.8,6,5
+Kolkata,West Bengal,State,East,22.5726,88.3639,30,32.5,25.3,34.9,2026-10-27,54.8,14,14.0,7,16
+Hyderabad,Telangana,State,South,17.385,78.4867,30,32.4,24.0,33.9,2026-10-15,6.9,3,18.7,8,31
+Bhopal,Madhya Pradesh,State,Central,23.2599,77.4126,30,32.4,22.0,34.5,2026-10-09,4.2,2,19.1,9,32
+Agartala,Tripura,State,Northeast,23.8315,91.2868,30,32.2,23.7,33.9,2026-10-13,39.6,12,19.1,10,22
+Chennai,Tamil Nadu,State,South,13.0827,80.2707,30,32.2,26.3,35.4,2026-10-06,264.4,17,20.7,11,2
+Dispur,Assam,State,Northeast,26.1433,91.7898,30,31.8,22.3,33.7,2026-09-30,36.1,8,17.0,12,23
+Bhubaneswar,Odisha,State,East,20.2961,85.8245,30,31.6,24.7,33.9,2026-10-04,116.5,11,21.8,13,7
+Puducherry,Puducherry,Union Territory,South,11.9416,79.8083,30,31.6,26.4,34.4,2026-09-30,225.5,14,24.9,14,3
+Raipur,Chhattisgarh,State,Central,21.2514,81.6296,30,31.5,22.4,34.2,2026-10-09,72.2,3,26.6,15,13
+Lucknow,Uttar Pradesh,State,North,26.8467,80.9462,30,31.2,22.4,32.8,2026-10-04,15.2,5,17.9,16,29
+New Delhi,Delhi,Union Territory,North,28.6139,77.209,30,31.2,21.8,35.7,2026-10-05,74.2,7,16.4,17,11
+Sri Vijaya Puram,Andaman and Nicobar Islands,Union Territory,East,11.6234,92.7265,30,31.1,24.8,32.3,2026-10-19,215.3,27,21.6,18,4
+Thiruvananthapuram,Kerala,State,South,8.5241,76.9366,30,30.7,24.4,33.8,2026-10-01,376.2,27,17.8,19,1
+Patna,Bihar,State,East,25.5941,85.1376,30,30.6,23.2,32.6,2026-10-05,35.2,7,18.2,20,24
+Kavaratti,Lakshadweep,Union Territory,South,10.5669,72.642,30,30.5,28.4,31.6,2026-10-15,107.0,9,26.4,21,9
+Itanagar,Arunachal Pradesh,State,Northeast,27.0844,93.6053,30,29.2,19.5,30.8,2026-10-12,46.9,7,18.0,22,19
+Chandigarh,Chandigarh,Union Territory,North,30.7333,76.7794,30,29.0,19.1,32.1,2026-10-03,21.4,3,19.7,23,26
+Bengaluru,Karnataka,State,South,12.9716,77.5946,30,28.5,20.1,30.8,2026-10-15,107.4,13,18.2,24,8
+Imphal,Manipur,State,Northeast,24.817,93.9368,30,27.9,19.4,30.0,2026-10-28,71.4,14,12.9,25,14
+Ranchi,Jharkhand,State,East,23.3441,85.3096,30,26.9,18.8,29.0,2026-10-04,45.4,7,26.6,26,20
+Dehradun,Uttarakhand,State,North,30.3165,78.0322,30,26.2,17.0,28.9,2026-10-01,66.1,7,11.0,27,15
+Aizawl,Mizoram,State,Northeast,23.7271,92.7176,30,26.0,17.4,28.5,2026-10-27,77.4,15,10.5,28,10
+Shillong,Meghalaya,State,Northeast,25.5788,91.8933,30,24.1,14.8,26.0,2026-09-30,52.5,14,12.6,29,17
+Kohima,Nagaland,State,Northeast,25.6751,94.1086,30,23.5,14.6,25.2,2026-10-13,137.2,23,9.9,30,6
+Gangtok,Sikkim,State,Northeast,27.3389,88.6065,30,22.5,12.4,25.9,2026-09-30,48.9,12,7.7,31,18
+Srinagar,Jammu and Kashmir,Union Territory,North,34.0837,74.7973,30,21.5,8.6,28.1,2026-10-05,74.0,6,14.9,32,12
+Shimla,Himachal Pradesh,State,North,31.1048,77.1734,30,18.5,6.6,21.5,2026-10-02,30.7,10,14.5,33,25
+Leh,Ladakh,Union Territory,North,34.1526,77.5771,30,9.9,-0.0,19.2,2026-10-04,12.6,4,19.1,34,30
