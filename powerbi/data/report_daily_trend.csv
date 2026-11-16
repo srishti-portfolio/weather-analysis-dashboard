@@ -1,5 +1,4 @@
 ﻿city,state_ut,region,obs_date,temp_mean_c,temp_7d_avg_c,precip_mm
-Agartala,Tripura,Northeast,2026-07-18,28.2,28.1,2.8
 Agartala,Tripura,Northeast,2026-07-19,26.8,28.1,18.4
 Agartala,Tripura,Northeast,2026-07-20,25.9,27.9,28.6
 Agartala,Tripura,Northeast,2026-07-21,27.2,27.6,5.3
@@ -119,7 +118,7 @@ Agartala,Tripura,Northeast,2026-11-11,24.0,25.7,2.2
 Agartala,Tripura,Northeast,2026-11-12,23.9,25.5,1.0
 Agartala,Tripura,Northeast,2026-11-13,24.2,25.3,0.0
 Agartala,Tripura,Northeast,2026-11-14,24.0,25.1,0.0
-Aizawl,Mizoram,Northeast,2026-07-18,22.1,22.1,0.1
+Agartala,Tripura,Northeast,2026-11-15,23.8,24.7,0.0
 Aizawl,Mizoram,Northeast,2026-07-19,21.2,22.0,4.8
 Aizawl,Mizoram,Northeast,2026-07-20,20.3,21.8,25.5
 Aizawl,Mizoram,Northeast,2026-07-21,21.3,21.6,20.6
@@ -239,7 +238,7 @@ Aizawl,Mizoram,Northeast,2026-11-11,17.6,19.9,0.1
 Aizawl,Mizoram,Northeast,2026-11-12,17.0,19.4,6.6
 Aizawl,Mizoram,Northeast,2026-11-13,17.3,18.9,0.0
 Aizawl,Mizoram,Northeast,2026-11-14,17.5,18.4,0.0
-Amaravati,Andhra Pradesh,South,2026-07-18,29.2,31.8,9.8
+Aizawl,Mizoram,Northeast,2026-11-15,17.2,18.0,0.0
 Amaravati,Andhra Pradesh,South,2026-07-19,30.9,31.5,2.6
 Amaravati,Andhra Pradesh,South,2026-07-20,30.7,31.2,1.9
 Amaravati,Andhra Pradesh,South,2026-07-21,29.4,30.7,4.8
@@ -358,7 +357,8 @@ Amaravati,Andhra Pradesh,South,2026-11-10,25.0,26.3,0.0
 Amaravati,Andhra Pradesh,South,2026-11-11,24.7,26.2,0.0
 Amaravati,Andhra Pradesh,South,2026-11-12,24.9,26.0,0.0
 Amaravati,Andhra Pradesh,South,2026-11-13,25.3,25.7,1.9
-Bengaluru,Karnataka,South,2026-07-18,22.8,24.7,6.0
+Amaravati,Andhra Pradesh,South,2026-11-14,26.0,25.6,0.7
+Amaravati,Andhra Pradesh,South,2026-11-15,25.7,25.4,0.0
 Bengaluru,Karnataka,South,2026-07-19,23.7,24.5,1.0
 Bengaluru,Karnataka,South,2026-07-20,22.9,24.1,8.3
 Bengaluru,Karnataka,South,2026-07-21,24.0,23.8,0.7
@@ -478,7 +478,7 @@ Bengaluru,Karnataka,South,2026-11-11,23.5,23.2,0.0
 Bengaluru,Karnataka,South,2026-11-12,22.8,23.2,0.0
 Bengaluru,Karnataka,South,2026-11-13,22.8,23.2,0.0
 Bengaluru,Karnataka,South,2026-11-14,23.4,23.3,0.0
-Bhopal,Madhya Pradesh,Central,2026-07-18,28.6,28.4,0.7
+Bengaluru,Karnataka,South,2026-11-15,22.9,23.2,0.0
 Bhopal,Madhya Pradesh,Central,2026-07-19,27.6,28.3,5.4
 Bhopal,Madhya Pradesh,Central,2026-07-20,26.6,28.1,14.4
 Bhopal,Madhya Pradesh,Central,2026-07-21,24.8,27.7,47.4
@@ -598,7 +598,7 @@ Bhopal,Madhya Pradesh,Central,2026-11-11,24.0,25.0,0.0
 Bhopal,Madhya Pradesh,Central,2026-11-12,23.3,24.8,0.0
 Bhopal,Madhya Pradesh,Central,2026-11-13,23.9,24.6,0.0
 Bhopal,Madhya Pradesh,Central,2026-11-14,24.2,24.4,0.0
-Bhubaneswar,Odisha,East,2026-07-18,27.3,28.2,27.1
+Bhopal,Madhya Pradesh,Central,2026-11-15,24.6,24.3,0.0
 Bhubaneswar,Odisha,East,2026-07-19,28.9,28.0,11.9
 Bhubaneswar,Odisha,East,2026-07-20,28.3,27.6,24.8
 Bhubaneswar,Odisha,East,2026-07-21,26.8,27.5,39.1
@@ -718,7 +718,7 @@ Bhubaneswar,Odisha,East,2026-11-11,25.5,26.1,0.2
 Bhubaneswar,Odisha,East,2026-11-12,25.9,26.0,0.2
 Bhubaneswar,Odisha,East,2026-11-13,25.5,25.7,0.0
 Bhubaneswar,Odisha,East,2026-11-14,25.6,25.6,0.0
-Chandigarh,Chandigarh,North,2026-07-18,31.4,30.4,0.0
+Bhubaneswar,Odisha,East,2026-11-15,25.2,25.5,0.0
 Chandigarh,Chandigarh,North,2026-07-19,30.5,30.7,1.1
 Chandigarh,Chandigarh,North,2026-07-20,27.5,30.3,17.3
 Chandigarh,Chandigarh,North,2026-07-21,27.4,29.9,5.0
@@ -838,7 +838,7 @@ Chandigarh,Chandigarh,North,2026-11-11,20.4,21.3,0.0
 Chandigarh,Chandigarh,North,2026-11-12,21.2,21.1,0.0
 Chandigarh,Chandigarh,North,2026-11-13,21.7,21.1,0.0
 Chandigarh,Chandigarh,North,2026-11-14,21.1,21.0,0.0
-Chennai,Tamil Nadu,South,2026-07-18,29.0,32.1,1.9
+Chandigarh,Chandigarh,North,2026-11-15,20.3,21.0,0.4
 Chennai,Tamil Nadu,South,2026-07-19,29.0,31.6,4.9
 Chennai,Tamil Nadu,South,2026-07-20,29.4,31.1,10.7
 Chennai,Tamil Nadu,South,2026-07-21,30.2,30.7,0.6
@@ -958,7 +958,7 @@ Chennai,Tamil Nadu,South,2026-11-11,27.9,27.9,0.0
 Chennai,Tamil Nadu,South,2026-11-12,27.6,27.9,0.1
 Chennai,Tamil Nadu,South,2026-11-13,27.2,27.8,1.5
 Chennai,Tamil Nadu,South,2026-11-14,27.7,27.8,2.2
-Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-07-18,26.8,28.2,22.4
+Chennai,Tamil Nadu,South,2026-11-15,27.1,27.8,0.0
 Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-07-19,26.7,27.9,30.2
 Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-07-20,26.4,27.4,56.2
 Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-07-21,26.7,27.0,75.6
@@ -1078,7 +1078,7 @@ Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-11-11,26.4,27.3,0.0
 Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-11-12,26.3,27.0,0.0
 Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-11-13,26.2,26.7,0.0
 Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-11-14,26.0,26.6,0.0
-Dehradun,Uttarakhand,North,2026-07-18,26.8,27.6,13.2
+Daman,Dadra and Nagar Haveli and Daman and Diu,West,2026-11-15,25.6,26.4,0.0
 Dehradun,Uttarakhand,North,2026-07-19,25.7,27.4,35.5
 Dehradun,Uttarakhand,North,2026-07-20,24.5,26.9,31.3
 Dehradun,Uttarakhand,North,2026-07-21,25.9,26.6,30.2
@@ -1198,7 +1198,7 @@ Dehradun,Uttarakhand,North,2026-11-11,18.9,18.9,0.0
 Dehradun,Uttarakhand,North,2026-11-12,18.3,18.7,0.0
 Dehradun,Uttarakhand,North,2026-11-13,18.4,18.7,0.0
 Dehradun,Uttarakhand,North,2026-11-14,17.7,18.5,0.0
-Dispur,Assam,Northeast,2026-07-18,26.6,27.7,20.0
+Dehradun,Uttarakhand,North,2026-11-15,16.9,18.3,0.1
 Dispur,Assam,Northeast,2026-07-19,26.8,27.6,22.3
 Dispur,Assam,Northeast,2026-07-20,26.1,27.4,45.7
 Dispur,Assam,Northeast,2026-07-21,28.2,27.3,5.8
@@ -1318,7 +1318,7 @@ Dispur,Assam,Northeast,2026-11-11,22.3,24.9,0.6
 Dispur,Assam,Northeast,2026-11-12,22.3,24.4,1.3
 Dispur,Assam,Northeast,2026-11-13,23.0,24.0,0.0
 Dispur,Assam,Northeast,2026-11-14,23.0,23.6,0.1
-Gandhinagar,Gujarat,West,2026-07-18,30.6,31.2,3.0
+Dispur,Assam,Northeast,2026-11-15,22.3,23.2,1.7
 Gandhinagar,Gujarat,West,2026-07-19,30.3,31.0,1.1
 Gandhinagar,Gujarat,West,2026-07-20,28.9,30.6,3.3
 Gandhinagar,Gujarat,West,2026-07-21,28.7,30.3,2.6
@@ -1438,7 +1438,7 @@ Gandhinagar,Gujarat,West,2026-11-11,28.0,27.8,0.0
 Gandhinagar,Gujarat,West,2026-11-12,26.9,27.8,0.0
 Gandhinagar,Gujarat,West,2026-11-13,26.1,27.7,0.0
 Gandhinagar,Gujarat,West,2026-11-14,26.3,27.5,0.0
-Gangtok,Sikkim,Northeast,2026-07-18,20.3,20.9,8.6
+Gandhinagar,Gujarat,West,2026-11-15,26.4,27.2,0.0
 Gangtok,Sikkim,Northeast,2026-07-19,20.4,20.8,41.9
 Gangtok,Sikkim,Northeast,2026-07-20,19.7,20.8,28.6
 Gangtok,Sikkim,Northeast,2026-07-21,19.4,20.5,39.8
@@ -1558,7 +1558,7 @@ Gangtok,Sikkim,Northeast,2026-11-11,13.3,14.7,4.6
 Gangtok,Sikkim,Northeast,2026-11-12,13.1,14.4,0.0
 Gangtok,Sikkim,Northeast,2026-11-13,13.3,14.2,0.2
 Gangtok,Sikkim,Northeast,2026-11-14,13.4,14.0,0.9
-Hyderabad,Telangana,South,2026-07-18,25.7,28.2,8.4
+Gangtok,Sikkim,Northeast,2026-11-15,12.7,13.6,6.6
 Hyderabad,Telangana,South,2026-07-19,26.1,27.7,2.2
 Hyderabad,Telangana,South,2026-07-20,25.6,27.1,6.7
 Hyderabad,Telangana,South,2026-07-21,24.2,26.4,12.7
@@ -1678,7 +1678,7 @@ Hyderabad,Telangana,South,2026-11-11,24.9,25.2,0.0
 Hyderabad,Telangana,South,2026-11-12,25.1,25.3,0.0
 Hyderabad,Telangana,South,2026-11-13,25.1,25.2,0.0
 Hyderabad,Telangana,South,2026-11-14,25.5,25.2,0.0
-Imphal,Manipur,Northeast,2026-07-18,25.1,25.3,0.8
+Hyderabad,Telangana,South,2026-11-15,25.2,25.1,0.0
 Imphal,Manipur,Northeast,2026-07-19,23.1,25.1,14.0
 Imphal,Manipur,Northeast,2026-07-20,22.7,24.7,4.2
 Imphal,Manipur,Northeast,2026-07-21,24.7,24.4,9.5
@@ -1798,7 +1798,7 @@ Imphal,Manipur,Northeast,2026-11-11,18.7,22.0,1.4
 Imphal,Manipur,Northeast,2026-11-12,18.7,21.3,9.5
 Imphal,Manipur,Northeast,2026-11-13,18.8,20.6,0.0
 Imphal,Manipur,Northeast,2026-11-14,18.6,19.9,0.0
-Itanagar,Arunachal Pradesh,Northeast,2026-07-18,26.4,27.2,9.0
+Imphal,Manipur,Northeast,2026-11-15,19.0,19.4,0.0
 Itanagar,Arunachal Pradesh,Northeast,2026-07-19,25.1,27.0,35.8
 Itanagar,Arunachal Pradesh,Northeast,2026-07-20,26.2,26.9,2.7
 Itanagar,Arunachal Pradesh,Northeast,2026-07-21,28.2,26.7,3.3
@@ -1917,7 +1917,8 @@ Itanagar,Arunachal Pradesh,Northeast,2026-11-10,22.1,22.3,0.0
 Itanagar,Arunachal Pradesh,Northeast,2026-11-11,20.3,21.9,1.0
 Itanagar,Arunachal Pradesh,Northeast,2026-11-12,19.3,21.5,1.3
 Itanagar,Arunachal Pradesh,Northeast,2026-11-13,20.2,21.2,0.0
-Jaipur,Rajasthan,North,2026-07-18,33.3,31.9,0.2
+Itanagar,Arunachal Pradesh,Northeast,2026-11-14,20.1,21.0,0.0
+Itanagar,Arunachal Pradesh,Northeast,2026-11-15,19.8,20.6,1.7
 Jaipur,Rajasthan,North,2026-07-19,33.0,32.3,1.1
 Jaipur,Rajasthan,North,2026-07-20,30.6,32.2,4.1
 Jaipur,Rajasthan,North,2026-07-21,26.7,31.6,27.8
@@ -2037,7 +2038,7 @@ Jaipur,Rajasthan,North,2026-11-11,23.6,24.4,0.0
 Jaipur,Rajasthan,North,2026-11-12,24.4,24.4,0.0
 Jaipur,Rajasthan,North,2026-11-13,24.9,24.4,0.0
 Jaipur,Rajasthan,North,2026-11-14,25.2,24.5,0.0
-Kavaratti,Lakshadweep,South,2026-07-18,28.2,28.4,3.6
+Jaipur,Rajasthan,North,2026-11-15,23.4,24.2,0.0
 Kavaratti,Lakshadweep,South,2026-07-19,27.8,28.3,5.8
 Kavaratti,Lakshadweep,South,2026-07-20,28.6,28.4,1.7
 Kavaratti,Lakshadweep,South,2026-07-21,28.8,28.4,2.5
@@ -2157,7 +2158,7 @@ Kavaratti,Lakshadweep,South,2026-11-11,29.5,29.1,1.0
 Kavaratti,Lakshadweep,South,2026-11-12,29.9,29.1,0.0
 Kavaratti,Lakshadweep,South,2026-11-13,30.0,29.4,0.0
 Kavaratti,Lakshadweep,South,2026-11-14,29.3,29.4,0.0
-Kohima,Nagaland,Northeast,2026-07-18,21.6,21.8,37.0
+Kavaratti,Lakshadweep,South,2026-11-15,29.2,29.5,0.0
 Kohima,Nagaland,Northeast,2026-07-19,20.4,21.6,59.7
 Kohima,Nagaland,Northeast,2026-07-20,20.4,21.4,24.0
 Kohima,Nagaland,Northeast,2026-07-21,21.6,21.3,10.2
@@ -2277,7 +2278,7 @@ Kohima,Nagaland,Northeast,2026-11-11,14.6,16.9,2.2
 Kohima,Nagaland,Northeast,2026-11-12,13.7,16.3,10.5
 Kohima,Nagaland,Northeast,2026-11-13,14.6,16.0,0.6
 Kohima,Nagaland,Northeast,2026-11-14,13.7,15.4,3.8
-Kolkata,West Bengal,East,2026-07-18,29.2,29.0,9.5
+Kohima,Nagaland,Northeast,2026-11-15,13.4,14.8,0.5
 Kolkata,West Bengal,East,2026-07-19,28.7,28.9,17.3
 Kolkata,West Bengal,East,2026-07-20,27.9,28.8,13.2
 Kolkata,West Bengal,East,2026-07-21,26.9,28.6,22.3
@@ -2397,7 +2398,7 @@ Kolkata,West Bengal,East,2026-11-11,25.1,26.0,1.8
 Kolkata,West Bengal,East,2026-11-12,25.2,25.8,0.9
 Kolkata,West Bengal,East,2026-11-13,25.5,25.7,0.0
 Kolkata,West Bengal,East,2026-11-14,25.5,25.7,0.0
-Leh,Ladakh,North,2026-07-18,20.7,15.7,0.1
+Kolkata,West Bengal,East,2026-11-15,25.9,25.7,0.0
 Leh,Ladakh,North,2026-07-19,20.3,16.7,1.3
 Leh,Ladakh,North,2026-07-20,17.9,17.3,5.5
 Leh,Ladakh,North,2026-07-21,14.7,17.4,19.9
@@ -2517,7 +2518,7 @@ Leh,Ladakh,North,2026-11-11,1.2,1.4,0.3
 Leh,Ladakh,North,2026-11-12,2.3,1.4,0.0
 Leh,Ladakh,North,2026-11-13,2.2,1.6,0.4
 Leh,Ladakh,North,2026-11-14,0.1,1.5,0.0
-Lucknow,Uttar Pradesh,North,2026-07-18,29.9,30.9,2.9
+Leh,Ladakh,North,2026-11-15,-2.4,1.0,0.2
 Lucknow,Uttar Pradesh,North,2026-07-19,28.2,30.4,9.0
 Lucknow,Uttar Pradesh,North,2026-07-20,27.2,29.7,8.6
 Lucknow,Uttar Pradesh,North,2026-07-21,27.5,29.2,20.2
@@ -2637,7 +2638,7 @@ Lucknow,Uttar Pradesh,North,2026-11-11,23.4,23.7,0.0
 Lucknow,Uttar Pradesh,North,2026-11-12,23.3,23.6,0.0
 Lucknow,Uttar Pradesh,North,2026-11-13,23.5,23.6,0.0
 Lucknow,Uttar Pradesh,North,2026-11-14,23.6,23.5,0.0
-Mumbai,Maharashtra,West,2026-07-18,27.4,28.0,16.1
+Lucknow,Uttar Pradesh,North,2026-11-15,23.4,23.5,0.1
 Mumbai,Maharashtra,West,2026-07-19,26.9,27.8,34.6
 Mumbai,Maharashtra,West,2026-07-20,26.7,27.5,51.7
 Mumbai,Maharashtra,West,2026-07-21,27.2,27.3,25.1
@@ -2757,7 +2758,7 @@ Mumbai,Maharashtra,West,2026-11-11,29.9,30.5,0.0
 Mumbai,Maharashtra,West,2026-11-12,29.3,30.3,0.0
 Mumbai,Maharashtra,West,2026-11-13,29.1,30.0,0.0
 Mumbai,Maharashtra,West,2026-11-14,28.6,29.7,0.0
-New Delhi,Delhi,North,2026-07-18,33.6,32.5,0.0
+Mumbai,Maharashtra,West,2026-11-15,28.1,29.4,0.0
 New Delhi,Delhi,North,2026-07-19,32.6,32.6,3.7
 New Delhi,Delhi,North,2026-07-20,28.7,32.1,32.1
 New Delhi,Delhi,North,2026-07-21,27.4,31.6,14.6
@@ -2877,7 +2878,7 @@ New Delhi,Delhi,North,2026-11-11,22.6,23.1,0.0
 New Delhi,Delhi,North,2026-11-12,23.4,23.1,0.0
 New Delhi,Delhi,North,2026-11-13,23.8,23.2,0.0
 New Delhi,Delhi,North,2026-11-14,23.7,23.3,0.0
-Panaji,Goa,West,2026-07-18,25.6,27.0,33.6
+New Delhi,Delhi,North,2026-11-15,22.9,23.2,0.0
 Panaji,Goa,West,2026-07-19,25.6,26.6,21.8
 Panaji,Goa,West,2026-07-20,25.8,26.3,31.0
 Panaji,Goa,West,2026-07-21,27.1,26.2,22.0
@@ -2997,7 +2998,7 @@ Panaji,Goa,West,2026-11-11,28.6,29.4,0.0
 Panaji,Goa,West,2026-11-12,28.0,29.3,0.0
 Panaji,Goa,West,2026-11-13,27.7,29.0,0.0
 Panaji,Goa,West,2026-11-14,27.4,28.7,0.0
-Patna,Bihar,East,2026-07-18,28.7,30.2,32.2
+Panaji,Goa,West,2026-11-15,28.1,28.4,0.0
 Patna,Bihar,East,2026-07-19,28.3,29.8,27.1
 Patna,Bihar,East,2026-07-20,27.8,29.5,18.7
 Patna,Bihar,East,2026-07-21,28.3,29.2,10.0
@@ -3117,7 +3118,7 @@ Patna,Bihar,East,2026-11-11,23.2,23.7,0.1
 Patna,Bihar,East,2026-11-12,23.1,23.5,0.0
 Patna,Bihar,East,2026-11-13,23.4,23.5,0.1
 Patna,Bihar,East,2026-11-14,23.5,23.5,0.0
-Puducherry,Puducherry,South,2026-07-18,30.1,31.5,0.4
+Patna,Bihar,East,2026-11-15,23.4,23.5,0.0
 Puducherry,Puducherry,South,2026-07-19,30.0,31.2,0.3
 Puducherry,Puducherry,South,2026-07-20,30.4,30.9,1.5
 Puducherry,Puducherry,South,2026-07-21,30.3,30.7,0.4
@@ -3237,7 +3238,7 @@ Puducherry,Puducherry,South,2026-11-11,27.4,27.5,0.0
 Puducherry,Puducherry,South,2026-11-12,27.3,27.4,0.0
 Puducherry,Puducherry,South,2026-11-13,27.1,27.4,0.3
 Puducherry,Puducherry,South,2026-11-14,27.2,27.3,2.1
-Raipur,Chhattisgarh,Central,2026-07-18,26.1,28.4,16.9
+Puducherry,Puducherry,South,2026-11-15,26.6,27.3,0.8
 Raipur,Chhattisgarh,Central,2026-07-19,27.2,28.1,9.9
 Raipur,Chhattisgarh,Central,2026-07-20,27.0,27.6,19.0
 Raipur,Chhattisgarh,Central,2026-07-21,25.4,26.9,31.3
@@ -3357,7 +3358,7 @@ Raipur,Chhattisgarh,Central,2026-11-11,21.8,23.2,0.0
 Raipur,Chhattisgarh,Central,2026-11-12,21.7,22.7,0.0
 Raipur,Chhattisgarh,Central,2026-11-13,22.2,22.4,0.0
 Raipur,Chhattisgarh,Central,2026-11-14,22.9,22.4,0.0
-Ranchi,Jharkhand,East,2026-07-18,25.8,26.4,14.4
+Raipur,Chhattisgarh,Central,2026-11-15,23.0,22.3,0.0
 Ranchi,Jharkhand,East,2026-07-19,25.5,26.1,17.7
 Ranchi,Jharkhand,East,2026-07-20,24.7,25.8,18.9
 Ranchi,Jharkhand,East,2026-07-21,23.7,25.4,16.1
@@ -3477,7 +3478,7 @@ Ranchi,Jharkhand,East,2026-11-11,20.4,20.3,0.0
 Ranchi,Jharkhand,East,2026-11-12,19.9,20.1,0.0
 Ranchi,Jharkhand,East,2026-11-13,19.7,20.0,0.0
 Ranchi,Jharkhand,East,2026-11-14,20.1,20.0,0.0
-Shillong,Meghalaya,Northeast,2026-07-18,21.7,21.9,3.2
+Ranchi,Jharkhand,East,2026-11-15,20.6,20.1,0.0
 Shillong,Meghalaya,Northeast,2026-07-19,20.9,21.8,6.7
 Shillong,Meghalaya,Northeast,2026-07-20,19.5,21.5,25.5
 Shillong,Meghalaya,Northeast,2026-07-21,21.5,21.4,6.2
@@ -3597,7 +3598,7 @@ Shillong,Meghalaya,Northeast,2026-11-11,14.6,17.3,2.2
 Shillong,Meghalaya,Northeast,2026-11-12,14.9,16.9,1.1
 Shillong,Meghalaya,Northeast,2026-11-13,15.7,16.7,0.2
 Shillong,Meghalaya,Northeast,2026-11-14,14.7,16.3,0.8
-Shimla,Himachal Pradesh,North,2026-07-18,19.2,18.6,2.7
+Shillong,Meghalaya,Northeast,2026-11-15,14.1,15.6,0.3
 Shimla,Himachal Pradesh,North,2026-07-19,18.7,18.6,4.1
 Shimla,Himachal Pradesh,North,2026-07-20,18.0,18.5,12.4
 Shimla,Himachal Pradesh,North,2026-07-21,16.8,18.3,11.6
@@ -3717,7 +3718,7 @@ Shimla,Himachal Pradesh,North,2026-11-11,9.3,9.9,0.0
 Shimla,Himachal Pradesh,North,2026-11-12,10.0,9.7,0.0
 Shimla,Himachal Pradesh,North,2026-11-13,9.9,9.7,0.2
 Shimla,Himachal Pradesh,North,2026-11-14,9.5,9.6,0.2
-Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-07-18,28.5,28.2,0.2
+Shimla,Himachal Pradesh,North,2026-11-15,7.3,9.3,4.4
 Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-07-19,28.4,28.2,0.8
 Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-07-20,28.5,28.2,1.8
 Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-07-21,28.5,28.2,4.5
@@ -3837,7 +3838,7 @@ Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-11-11,26.1,27.1,17.9
 Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-11-12,26.1,26.9,21.2
 Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-11-13,26.6,26.7,15.5
 Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-11-14,28.1,26.9,4.9
-Srinagar,Jammu and Kashmir,North,2026-07-18,28.7,24.1,0.0
+Sri Vijaya Puram,Andaman and Nicobar Islands,East,2026-11-15,27.4,26.7,17.8
 Srinagar,Jammu and Kashmir,North,2026-07-19,25.3,24.9,10.3
 Srinagar,Jammu and Kashmir,North,2026-07-20,23.7,25.3,6.7
 Srinagar,Jammu and Kashmir,North,2026-07-21,20.3,24.9,29.4
@@ -3957,7 +3958,7 @@ Srinagar,Jammu and Kashmir,North,2026-11-11,11.2,11.3,1.0
 Srinagar,Jammu and Kashmir,North,2026-11-12,7.6,10.8,13.8
 Srinagar,Jammu and Kashmir,North,2026-11-13,7.9,10.4,26.2
 Srinagar,Jammu and Kashmir,North,2026-11-14,8.9,10.0,5.4
-Thiruvananthapuram,Kerala,South,2026-07-18,26.4,26.8,1.6
+Srinagar,Jammu and Kashmir,North,2026-11-15,7.8,9.5,12.8
 Thiruvananthapuram,Kerala,South,2026-07-19,26.3,26.7,7.3
 Thiruvananthapuram,Kerala,South,2026-07-20,26.5,26.6,2.2
 Thiruvananthapuram,Kerala,South,2026-07-21,27.3,26.6,0.8
@@ -4077,3 +4078,4 @@ Thiruvananthapuram,Kerala,South,2026-11-11,27.4,26.8,3.0
 Thiruvananthapuram,Kerala,South,2026-11-12,26.4,26.8,10.6
 Thiruvananthapuram,Kerala,South,2026-11-13,26.8,26.9,6.7
 Thiruvananthapuram,Kerala,South,2026-11-14,27.0,26.9,2.2
+Thiruvananthapuram,Kerala,South,2026-11-15,27.1,27.0,1.2
